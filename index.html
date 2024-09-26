@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>The Crypto Pond</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/logo-tab.png" rel="icon">
+  <link href="assets/img/logo-tab.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/your/assets/CascadiaMono-Bold.otf" as="font" type="font/otf" crossorigin="anonymous">
+  <link rel="stylesheet" href="path/to/your/assets/kolen.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo-nav.png" alt="">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-smoke.png" alt="" data-aos="fade-in">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row justify-content-center">
+              <div class="col-lg-12">
+                  <div class="row justify-content-center headline">
+                      <div class="text-center">
+                          <h2>Join The Crypto Pond now!</h2>
+                          <p>Become a Member of Our Exclusive Community!</p>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+                          <div class="row justify-content-center gy-4 hero-form">
+                              <!-- Part 1 -->
+                              <div class="part1 active">
+                                  <div class="col-md-12">
+                                      <label for="question1">1. What's your Twitter Username?</label>
+                                      <input type="text" id="question1" class="form-control" required>
+
+                                  </div>
+                                  <div class="col-md-12">
+                                      <label for="question2">2. What is your Telegram username?</label>
+                                      <input type="text" class="form-control" id="question2" required>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <label for="question3">3. How long have you been trading crypto for?</label>
+                                      <input type="text" class="form-control" id="question3" required>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <label for="question4">4. How long have you been trading memecoins for?</label>
+                                      <input type="text" class="form-control" id="question4" required>
+                                  </div>
+                                  <div class="col-md-12 text-center">
+                                      <button type="button" id="nextButton" class="btn-get-started">Next</button>
+                                  </div>
+                              </div>
+
+                            <!-- Part 2 -->
+                            <div class="part2" style="display: none;">
+                              <div class="col-md-12">
+                                  <label for="question5">5. What's your goal with trying to join The Crypto Pond?</label>
+                                  <input type="text" id="question5" class="form-control" required>
+                              </div>
+                              <div class="col-md-12">
+                                  <label for="question6">6. Why should you be chosen? What makes you stand out?</label>
+                                  <input type="text" class="form-control" id="question6" required>
+                              </div>
+                              <div class="col-md-12">
+                                  <label for="question7">7. Are there any groups that you have been a part of already?</label>
+                                  <input type="text" class="form-control" id="question7" required>
+                              </div>
+                              <div class="col-md-12">
+                                  <label for="question8">8. Use all the referral links provided here.</label>
+                                  <input type="text" class="form-control" id="question8" required>
+                              </div>
+                              <div class="col-md-12 text-center">
+                              <div class="loading">Loading</div>
+                              <div class="error-message"></div>
+                              <div class="sent-message">Your message has been sent. Thank you!</div>
+                                  <button type="button" id="backButton" class="btn-get-started">Back</button>
+                                  <button type="submit" id="submitButton" class="btn-get-started">Submit</button>
+                              </div>
+                            </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  <section id="hero" class="hero section dark-background">
+    <div class="overlay"></div>
+    <img src="assets/img/logo-fade.png" alt="" data-aos="fade-in">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="row justify-content-center headline" >
+                <div class="text-center hero-slogan">
+                  <h1>WELCOME TO THE</h1>
+                  <h2>CRYPTOPOND</h2>
+                  <p>Your Gateway to the Best Free
+                    Crypto Networking Community</p>
+              </div>
+              <div class="row" >
+                <div class="col justify-content-center" >
+                  <br>
+                  <a href="#about" class="a-slogan">LEARN MORE</a>
+                  <a href="#hero" class="a-slogan" style="background-color: #4bd137;">SIGN UP</a>
+                </div>
+              </div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="about" class="about section ">
+    <div class="overlay"></div>
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+
+     
+    </div><!-- End Section Title -->
+
+    <div class="container">
+        <div class="hero-split" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/what/logofont.png" class="img-fluid dark-background" alt="">
+        </div>
+        <div class="hero-split2" data-aos="fade-up" data-aos-delay="200">
+          <h2>WHAT IS THECRYPTOPOND?<br></h2>
+          <p>TheCryptoPond is the premier free crypto networking group in the space. We're dedicated to hunting for the best plays throughout the bullrun with some 
+            of the hardest working individuals in crypto. Enjoy daily calls, voice chats, alpha news, insider info, and frequent giveaways.</p>
+        </div>
+
+    </div>
+
+</section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="unique" class="unique section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What Makes TheCryptoPond Unique?</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="wrapper">
+
+          <div class="wrapper-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="unique-item  position-relative">
+              <div class="image">
+                <img src="assets/img/unique/daily.png" alt="" data-aos="fade-in">
+              </div>
+                <h3>Daily Crypto Calls</h3>
+              </a>
+              <p>Get expert insights on crypto trends and opportunities through our daily calls, helping you maximize gains during the bullrun</p>
+            </div>
+          </div><!-- End unique Item -->
+
+          <div class="wrapper-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="unique-item position-relative">
+              <div class="image">
+                <img src="assets/img/unique/voice.png" alt="" data-aos="fade-in">
+              </div>
+                <h3>Active Voice Chats</h3>
+              </a>
+              <p>Join real-time discussions on market updates, share insights, and collaborate with a community of crypto enthusiasts.</p>
+            </div>
+          </div><!-- End unique Item -->
+
+          <div class="wrapper-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="unique-item position-relative">
+              <div class="image">
+                <img src="assets/img/unique/news.png" alt="" data-aos="fade-in">
+              </div>
+                <h3>Timely Alpha News</h3>
+              </a>
+              <p>Stay ahead with the latest crypto news and analysis of emerging projects, keeping you in formed and prepared.</p>
+            </div>
+          </div><!-- End unique Item -->
+
+          <div class="wrapper-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="unique-item position-relative">
+              <div class="image">
+                <img src="assets/img/unique/giveaway.png" alt="" data-aos="fade-in">
+              </div>
+                <h3>Frequent Giveaways</h3>
+              </a>
+              <p>We reward our active community with giveaways, offering crypto assets, premium tools, and exclusive resources.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End unique Item -->
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+    <!-- Why Join us Section -->
+    <section id="why-us" class="why section ">
+      <div class="overlay"></div>
+      <!-- Section Title -->
+     <!-- End Section Title -->
+
+      <div class="container">
+          <div class="wrapper-split" data-aos="fade-up" data-aos-delay="200">
+            <ul>
+              <li> 
+                  <h2 class="section-title">WHY JOIN THE CRYPTOPOND?</h2>
+              </li>
+              <li>
+                <p>TheCryptoPond isn’t just a networking group. It’s a thriving community where everyone is committed to mutual success. By joining us, you gain access to:</p>
+              </li>
+              <li>
+                <span><img src="assets/img/join/support.png" class="img-icon" alt=""></span> 
+                <h3>A Supportive Network</h3>
+              </li>
+              <li><p>Connect with fellow crypto enthusiasts, traders, and experts who are as passionate about crypto as you are.</p></li>
+
+              <li>
+                <img src="assets/img/join/insights.png" class="img-icon" alt=""> 
+                <h3>Exclusive Insights</h3>
+              </li>
+              <li><p>Benefit from expert analysis and insider knowledge that can help you make smarter investment decisions.</p></li>
+
+              <li>
+                <img src="assets/img/join/collaborative.png" class="img-icon" alt=""> 
+                <h3>Collaborative Environment</h3>
+              </li>
+              <li><p>Participate in real-time discussions, share your experiences, and learn from others in a collaborative setting.</p></li>
+
+              <li>
+                <img src="assets/img/join/opportunities.png" class="img-icon" alt=""> 
+                <h3>Opportunities to Win</h3>
+              </li>
+              <li><p>With our regular giveaways, you have the chance to win valuable prizes that can enhance your crypto journey.</p></li>
+            </ul>
+          </div>
+
+          <div class="wrapper-split2" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/join/join.png" class="img-fluid why-side-img" alt="">
+          </div>
+      </div>
+
+    </section><!-- /Why Join Us Section -->
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class=" justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="call-content">
+            <div class="text-center">
+              <h2>JOIN THE CRYPTO POND NOW!</h2>
+              <p>Get access to daily calls, insider info, and giveaways. Sign up and dive into the bullrun!</p>
+            </div>
+            <div class="text-center ">
+              <a class="cta-btn" href="#">SIGN UP</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-12">
+        <div class="col-lg-12 col-md-6">
+          <div class="footer-about">
+            <a href="index.html" class="logo sitename">Contact us</a>
+            <div class="footer-contact pt-3">
+              <p>Have questions or need more information? Reach out to us at Cryptofrogsofficial@gmail.com
+                 or connect with us on social media. We’re here to help you make the most of your experience in our space.</p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href="https://x.com/TheCryptoPond"><img src="assets/img/contact/x.png" alt=""></a>
+              <a href="https://www.instagram.com/thecryptopond/"><img src="assets/img/contact/instagram.png" alt=""></a>
+              <a href="https://t.me/cryptopond"><img src="assets/img/contact/telegram.png" alt=""></a>
+              <a href="https://t.me/cryptofrog"><img src="assets/img/contact/sms.png" alt=""></a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Cryptofrogsofficial@gmail.com"><img src="assets/img/contact/email.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p><span>Copyright © </span> <strong class="px-1 sitename">2024</strong> <span>theCryptopond</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('nextButton').addEventListener('click', function() {
+        document.querySelector('.part1').style.display = 'none';
+        document.querySelector('.part2').style.display = 'block';
+    });
+    
+    document.getElementById('backButton').addEventListener('click', function() {
+        document.querySelector('.part2').style.display = 'none';
+        document.querySelector('.part1').style.display = 'block';
+    });
+</script>
+
+</body>
+
+</html>
