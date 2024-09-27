@@ -14,34 +14,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit;
 }
 
+$response = ["status" => "error", "message" => "Form submission failed."];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect form data
-    $twitter = $_POST['question1'];
-    $telegram = $_POST['question2'];
-    $crypto_experience = $_POST['question3'];
-    $meme_experience = $_POST['question4'];
-    $goal = $_POST['question5'];
-    $why_chosen = $_POST['question6'];
-    $groups = $_POST['question7'];
-    $referrals = $_POST['question8'];
+    $twitter = $_POST['question1'] ?? '';
+    $telegram = $_POST['question2'] ?? '';
+    $crypto_experience = $_POST['question3'] ?? '';
+    $meme_experience = $_POST['question4'] ?? '';
+    $goal = $_POST['question5'] ?? '';
+    $why_chosen = $_POST['question6'] ?? '';
+    $groups = $_POST['question7'] ?? '';
+    $referrals = $_POST['question8'] ?? '';
 
     $mail = new PHPMailer(true);
     
     try {
-        // Server settings
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'thecryptopond02@gmail.com'; // Your Gmail address
+        $mail->Username = 'thecryptopond02@gmail.com';
         $mail->Password = 'bemc zjjr vnuy bftk'; // Use your App password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        // Recipients
         $mail->setFrom('thecryptopond02@gmail.com', 'The Crypto Pond');
-        $mail->addAddress('marcanthonycasale1@gmail.com', 'Crypto Pond'); // Recipient's email
+        $mail->addAddress('marcanthonycasale1@gmail.com');
 
-        // Content
         $mail->isHTML(true);
         $mail->Subject = 'New Form Submission';
         $mail->Body = "
@@ -56,9 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ";
 
         $mail->send();
-        echo 'Message has been sent';
+        $response = ["status" => "success", "message" => "Message has been sent"];
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $response["message"] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
+
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>
