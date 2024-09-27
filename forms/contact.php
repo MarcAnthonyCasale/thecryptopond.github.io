@@ -2,7 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Autoload PHPMailer
+require 'phpmailer/Exception.php';
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
