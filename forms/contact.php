@@ -6,6 +6,14 @@ require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 
+header("Access-Control-Allow-Origin: https://cryptopond.net");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
     $twitter = $_POST['question1'];
